@@ -1,5 +1,5 @@
 public class BombaCombustivel {
-    public void abastecer(Carro carro){
+    public synchronized void abastecer(Carro carro){
         System.out.println("Modelo " + carro.getModelo()+ 
             "Chegou para abastecer");
         try{
@@ -9,5 +9,5 @@ public class BombaCombustivel {
         carro.setTanqueCombustivel(40);
         
         System.out.println("Modelo" + carro.getModelo() + "TERMINOU DE ABASTECER");
-}
-  
+        }
+    }}
